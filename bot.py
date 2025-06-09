@@ -55,6 +55,6 @@ def notify_new_coins():
 
 
 # Lancement périodique du bot
-while True:
+while True:robot.send_message(chat_id=ID_CHAT, text="✅ Le bot a bien démarré et est en ligne !")
     notify_new_coins()
     time.sleep(60)  # Vérifie chaque minute
