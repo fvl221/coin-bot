@@ -42,4 +42,12 @@ def notify_new_coins():
 
         if liquidity >= MIN_LIQUIDITY and volume >= MIN_VOLUME_24H and holders >= MIN_HOLDERS:
             message = (
-                f"
+                
+        f"🚀 Nouveau meme coin détecté !\n\n"
+        f"Nom : {coin.get('name')}\n"
+        f"Symbole : {coin.get('symbol')}\n"
+        f"Liquidité : ${liquidity}\n"
+        f"Volume 24h : ${volume}\n"
+        f"Nombre de holders : {holders}\n"
+        f"Lien : https://birdeye.so/token/{coin.get('address')}"
+    bot.send_message(chat_id=CHAT_ID, text=message)
